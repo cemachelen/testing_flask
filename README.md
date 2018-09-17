@@ -26,4 +26,8 @@ and defining the environment:
 set FLASK_APP=flaskr
 set FLASK_ENV=development
 ```
+
+* The app can be run simply by the command: `flask run`
+* The database can be initialized with the command: `flask initdb`
+ 
 ## License ##
