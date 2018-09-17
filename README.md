@@ -20,4 +20,10 @@ This is a toy repository for using Flask
 
 Example codes for building python flask applications
 
+Must use the pip environment by running `pipenv shell`
+and defining the environment:
+```bash
+set FLASK_APP=flaskr
+set FLASK_ENV=development
+```
 ## License ##
