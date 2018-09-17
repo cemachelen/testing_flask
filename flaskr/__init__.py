@@ -2,6 +2,8 @@ import os
 
 from flask import Flask
 from flask import current_app
+# Import code
+from . import db, auth
 
 def create_app(test_config=None):
     # create and configure the app
@@ -33,7 +35,8 @@ def create_app(test_config=None):
 
     # when following the flask tutorial make sure not to start a new app!
     # we only want one create_app()!!
-    from . import db
+    # Database
     db.init_app(app)
-
+    # blueprints and autherization: view to register users and login and log out
+    app.register_blueprint(auth.bp)
     return app
