@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask
-
+from flask import current_app
 
 def create_app(test_config=None):
     # create and configure the app
@@ -31,12 +31,8 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
 
-    return app
-
-def create_app():
-    app = ...
-    # existing code omitted
-
+    # when following the flask tutorial make sure not to start a new app!
+    # we only want one create_app()!!
     from . import db
     db.init_app(app)
 
